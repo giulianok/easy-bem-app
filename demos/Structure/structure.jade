@@ -1,0 +1,26 @@
+// Make sure the path is correct
+include easylib/bemto/easybem
+
+// The prefix is NOT required
+-var $prefix = 'structure-'
+
++bemto_scope({prefix: $prefix})
+	+b.UL.menu
+		+e.LI.item
+			+e.A.button(href="#", title="") Button 1
+		+e.LI.item
+			+e.A.button._active(href="#", title="") Button 2
+		+e.LI.item
+			+e.A.button(href="#", title="") Button 3
+	
+	// Reusing the Block "menu" with a modifier
+	+b.UL.menu._right
+		+e.LI.item
+			+e.A.button(href="#", title="") Button 1
+		+e.LI.item
+			+e.A.button._active(href="#", title="") Button 2
+		+e.LI.item
+			+e.A.button(href="#", title="") Button 3
+		
+
+
